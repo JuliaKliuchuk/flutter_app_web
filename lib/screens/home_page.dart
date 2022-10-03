@@ -6,6 +6,7 @@ import 'package:flutter_app_web/widgets/featured_tiles.dart';
 import 'package:flutter_app_web/widgets/floating_quick_access_bar.dart';
 import 'package:flutter_app_web/widgets/main_heading.dart';
 import 'package:flutter_app_web/widgets/menu_drawer.dart';
+import 'package:flutter_app_web/widgets/responsive.dart';
 import 'package:flutter_app_web/widgets/top_bar_contents.dart';
 
 class HomePage extends StatefulWidget {
@@ -42,7 +43,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: screenSize.width < 800
+      appBar: ResponsiveWidget.isSmallScreen(context)
           ? AppBar(
               iconTheme: const IconThemeData(color: Colors.blue),
               elevation: 0,

@@ -7,10 +7,10 @@ class TopBarContents extends StatefulWidget {
   const TopBarContents(this.opacity, {super.key});
 
   @override
-  _TopBarContentsState createState() => _TopBarContentsState();
+  TopBarContentsState createState() => TopBarContentsState();
 }
 
-class _TopBarContentsState extends State<TopBarContents> {
+class TopBarContentsState extends State<TopBarContents> {
   final List _isHovering = [false, false, false, false];
   List<Widget> rowElements = [];
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_web/widgets/responsive.dart';
 
 class FeaturedHeading extends StatelessWidget {
   const FeaturedHeading({
@@ -16,27 +17,54 @@ class FeaturedHeading extends StatelessWidget {
         left: screenSize.width / 15,
         right: screenSize.width / 15,
       ),
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: const [
-          Text(
-            'Featured',
-            style: TextStyle(
-              fontSize: 36,
-              fontFamily: 'Raleway',
-              fontWeight: FontWeight.bold,
-              color: Color(0xFF077bd7),
+      child: ResponsiveWidget.isSmallScreen(context)
+          ? Row(
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const <Widget>[
+                    Text(
+                      'Featured',
+                      style: TextStyle(
+                        fontSize: 36,
+                        fontFamily: 'Raleway',
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF077bd7),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'Clue of the wooden cottage',
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
+                ),
+              ],
+            )
+          : Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: const [
+                Text(
+                  'Featured',
+                  style: TextStyle(
+                    fontSize: 36,
+                    fontFamily: 'Raleway',
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF077bd7),
+                  ),
+                ),
+                Expanded(
+                  child: Text(
+                    'Clue of the wooden cottage',
+                    textAlign: TextAlign.end,
+                  ),
+                ),
+              ],
             ),
-          ),
-          Expanded(
-            child: Text(
-              'Clue of the wooden cottage',
-              textAlign: TextAlign.end,
-            ),
-          ),
-        ],
-      ),
     );
   }
 }

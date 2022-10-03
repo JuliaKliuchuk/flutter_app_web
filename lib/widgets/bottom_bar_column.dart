@@ -7,6 +7,7 @@ class BottomBarColumn extends StatelessWidget {
   final String s3;
 
   const BottomBarColumn({
+    super.key,
     required this.heading,
     required this.s1,
     required this.s2,
@@ -22,8 +23,8 @@ class BottomBarColumn extends StatelessWidget {
         children: [
           Text(
             heading,
-            style: const TextStyle(
-              color: Colors.white,
+            style: TextStyle(
+              color: Colors.blueGrey[100],
               fontSize: 18,
               fontWeight: FontWeight.w500,
             ),
@@ -34,25 +35,22 @@ class BottomBarColumn extends StatelessWidget {
           Text(
             s1,
             style: const TextStyle(
-              color: Colors.white,
+              color: Colors.white60,
               fontSize: 14,
-              fontWeight: FontWeight.w500,
             ),
           ),
           Text(
             s2,
             style: const TextStyle(
-              color: Colors.white,
+              color: Colors.white60,
               fontSize: 14,
-              fontWeight: FontWeight.w500,
             ),
           ),
           Text(
             s3,
             style: const TextStyle(
-              color: Colors.white,
+              color: Colors.white60,
               fontSize: 14,
-              fontWeight: FontWeight.w500,
             ),
           ),
         ],
