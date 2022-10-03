@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_web/widgets/featured_heading.dart';
+import 'package:flutter_app_web/widgets/featured_tiles.dart';
 import 'package:flutter_app_web/widgets/floating_quick_access_bar.dart';
 import 'package:flutter_app_web/widgets/top_bar_contents.dart';
 
@@ -43,31 +44,36 @@ class _HomePageState extends State<HomePage> {
           _opacity,
         ),
       ),
-      body: Column(
-        children: [
-          Stack(
-            children: [
-              SizedBox(
-                height: screenSize.height * 0.65,
-                width: screenSize.width,
-                child: Image.asset(
-                  'assets/images/background.png',
-                  fit: BoxFit.cover,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Stack(
+              children: [
+                SizedBox(
+                  height: screenSize.height * 0.65,
+                  width: screenSize.width,
+                  child: Image.asset(
+                    'assets/images/background.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
-              Column(
-                children: [
-                  FloatingQuickAccessBar(
-                    screenSize: screenSize,
-                  ),
-                  FeaturedHeading(
-                    screenSize: screenSize,
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ],
+                Column(
+                  children: [
+                    FloatingQuickAccessBar(
+                      screenSize: screenSize,
+                    ),
+                    FeaturedHeading(
+                      screenSize: screenSize,
+                    ),
+                    FeaturedTiles(
+                      screenSize: screenSize,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
