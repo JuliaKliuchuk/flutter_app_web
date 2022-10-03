@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_web/widgets/bottom_bar.dart';
+import 'package:flutter_app_web/widgets/carousel.dart';
 import 'package:flutter_app_web/widgets/featured_heading.dart';
 import 'package:flutter_app_web/widgets/featured_tiles.dart';
 import 'package:flutter_app_web/widgets/floating_quick_access_bar.dart';
+import 'package:flutter_app_web/widgets/main_heading.dart';
 import 'package:flutter_app_web/widgets/top_bar_contents.dart';
 
 class HomePage extends StatefulWidget {
@@ -45,6 +48,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: SingleChildScrollView(
+        controller: _scrollController,
         child: Column(
           children: [
             Stack(
@@ -68,6 +72,14 @@ class _HomePageState extends State<HomePage> {
                     FeaturedTiles(
                       screenSize: screenSize,
                     ),
+                    MainHeading(
+                      screenSize: screenSize,
+                    ),
+                    const MainCarousel(),
+                    SizedBox(
+                      height: screenSize.height / 10,
+                    ),
+                    const BottomBar(),
                   ],
                 ),
               ],
