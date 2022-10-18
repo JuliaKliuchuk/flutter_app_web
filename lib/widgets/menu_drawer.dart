@@ -9,24 +9,27 @@ class MenuDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: const Color(0xFF077bd7),
+        color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              const SizedBox(
+                height: 20,
+              ),
               InkWell(
                 onTap: () {},
                 child: const Text(
                   'Home',
-                  style: TextStyle(color: Colors.white, fontSize: 22),
+                  style: TextStyle(color: Color(0xFF077bd7), fontSize: 22),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
                 child: Divider(
-                  color: Colors.blueGrey.shade400,
+                  color: Colors.blueGrey.shade100,
                   thickness: 2,
                 ),
               ),
@@ -34,13 +37,13 @@ class MenuDrawer extends StatelessWidget {
                 onTap: () {},
                 child: const Text(
                   'About',
-                  style: TextStyle(color: Colors.white, fontSize: 22),
+                  style: TextStyle(color: Color(0xFF077bd7), fontSize: 22),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
                 child: Divider(
-                  color: Colors.blueGrey.shade400,
+                  color: Colors.blueGrey.shade100,
                   thickness: 2,
                 ),
               ),
@@ -48,13 +51,13 @@ class MenuDrawer extends StatelessWidget {
                 onTap: () {},
                 child: const Text(
                   'History',
-                  style: TextStyle(color: Colors.white, fontSize: 22),
+                  style: TextStyle(color: Color(0xFF077bd7), fontSize: 22),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
                 child: Divider(
-                  color: Colors.blueGrey.shade400,
+                  color: Colors.blueGrey.shade100,
                   thickness: 2,
                 ),
               ),
@@ -62,7 +65,7 @@ class MenuDrawer extends StatelessWidget {
                 onTap: () {},
                 child: const Text(
                   'Contact',
-                  style: TextStyle(color: Colors.white, fontSize: 22),
+                  style: TextStyle(color: Color(0xFF077bd7), fontSize: 22),
                 ),
               ),
               const Expanded(
@@ -71,7 +74,7 @@ class MenuDrawer extends StatelessWidget {
                   child: Text(
                     'Copyright © 2021 | DBestech',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Color(0xFF077bd7),
                       fontSize: 14,
                     ),
                   ),
